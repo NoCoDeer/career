@@ -8,6 +8,96 @@ Description: Careerfy brings you the most simple solution to display jobs on any
 Tags: two-columns,left-sidebar,custom-background,custom-colors,custom-header,custom-menu,editor-style,featured-images,microformats,post-formats,rtl-language-support,sticky-post,threaded-comments,translation-ready
 Version: 1.6
 Updated: 2023-06-01 14:27:32
-
 */
+
+/* Child theme custom styles for modern responsive layout */
+
+:root {
+    --cfy-primary: #1c64f2;
+    --cfy-dark: #1f2937;
+    --cfy-light: #f9fafb;
+}
+
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--cfy-light);
+    color: var(--cfy-dark);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cfy-site-header {
+    background-color: #fff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.cfy-site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.cfy-site-header .logo {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--cfy-primary);
+    text-decoration: none;
+}
+
+.cfy-site-header nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.cfy-site-header nav a {
+    text-decoration: none;
+    color: var(--cfy-dark);
+    font-weight: 500;
+}
+
+.cfy-site-header .menu-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .cfy-site-header nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        padding: 1rem;
+        display: none;
+    }
+    .cfy-site-header nav.open {
+        display: flex;
+    }
+    .cfy-site-header .menu-toggle {
+        display: block;
+    }
+}
+
+.cfy-job-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    margin: 2rem auto;
+}
+
+.cfy-job-grid .job-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+}
 
